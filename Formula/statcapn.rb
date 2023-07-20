@@ -13,11 +13,7 @@ class Statcapn < Formula
   end
 
   def install
-    if Hardware::CPU.arm?
-      bin.install "bin/statcapn-darwin-arm64" => "statcapn"
-    else
-      bin.install "bin/statcapn-darwin-amd64" => "statcapn"
-    end
+    bin.install "bin/statcapn" => "statcapn"
   end
 
   test do
