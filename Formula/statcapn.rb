@@ -13,7 +13,7 @@ class Statcapn < Formula
   end
 
   def install
-    bin.install "bin/statcapn" => "statcapn"
+    bin.install "statcapn" => "statcapn"
   end
 
   test do
