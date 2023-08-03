@@ -1,4 +1,4 @@
-class DDC < Formula
+class Ddc < Formula
     desc "collect logs of Dremio for analysis"
     homepage "https://github.com/dremio/dremio-diagnostic-collector"
     version "0.7.0"
