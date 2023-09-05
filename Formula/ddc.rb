@@ -1,15 +1,15 @@
 class Ddc < Formula
     desc "collect logs of Dremio for analysis"
     homepage "https://github.com/dremio/dremio-diagnostic-collector"
-    version "0.7.0"
+    version "0.7.1"
   
     # Define the download URLs and corresponding SHA256 checksums for the binary releases
     url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-mac-intel.zip"
-    sha256 "4e69b8f92cff9224822e7e7efce421e51f5acb383df7f6ed504c445971e87fb1"
+    sha256 "0b2210c84785198dafaf71ebac5b295081ecdc0c1cbbceebf1c0908e0aed7db6"
 
     if Hardware::CPU.arm?
         url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-mac-m-series.zip"
-        sha256 "0cb0df5acb618db21614676c7aa43759c89c74df0ad39f2171cc5f2610030645"
+        sha256 "b8bda4595baa0c8466c3f44c6dd567846b4f56b340fa6b126f1b3537c42d8e41"
     end
   
     def install
