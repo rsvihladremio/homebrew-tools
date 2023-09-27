@@ -1,4 +1,4 @@
-class Statcapn < Formula
+class Gclog < Formula
   desc "JDK 8 gclog analyzer and reporter"
   homepage "https://github.com/rsvihladremio/gclog"
   version "0.2.1"
@@ -13,11 +13,11 @@ class Statcapn < Formula
   end
 
   def install
-    bin.install "statcapn" => "statcapn"
+    bin.install "gclog" => "gclog"
   end
 
   test do
     # Add test logic here if applicable
-    system "#{bin}/statcapn", "--version"
+    system "#{bin}/gclog", "--version"
   end
 end
