@@ -1,11 +1,11 @@
 class DremioStress < Formula
   desc "Simple tool to stress dremio via ODBC and REST interfaces"
   homepage "https://github.com/rsvihladremio/dremio-stress"
-  version "0.1.0"
+  version "0.2.0"
 
   # Define the download URLs and corresponding SHA256 checksums for the binary releases
   url "https://github.com/rsvihladremio/dremio-stress/releases/download/v#{version}/dremio-stress-mac-amd64.zip"
-  sha256 "782cd6fc86eeb6b201ce45e3fc293dafe37b4f873ff5548ac1de6222ae6d7b96"
+  sha256 "886bee7c7e539e726442d5a1f33df00970431c850f42fc3d502024e36b7c2921"
 
   def install
     bin.install "dremio-stress" => "dremio-stress"
