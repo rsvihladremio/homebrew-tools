@@ -18,6 +18,12 @@ Provides a good method for beating up Dremio with some load or to simulate given
 
     brew install dremio-stress
 
+## Dremio Batch Execute
+
+Want to run a bunch of queries in order against a server. Say set all those 2000 permissions for new roles? Replicate an environment on other clusters? But you don't want to write _any_ _code_ then dremio-batch-execute will work wonders for you. Just dump all your SQL statements into a file and run dremio-batch-execute
+
+    brew install dremio-batch-execute
+
 ## ssdownloader
 
 Will search a zendesk ticket for all links including Sendsafely links and download them [ssdownloader repo](https://github.com/rsvihladremio/ssdownloader).
