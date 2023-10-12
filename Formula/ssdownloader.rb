@@ -16,7 +16,7 @@ class Ssdownloader < Formula
   desc "ssdownloader integrates Zendesk and SendSafely APIs to easily download tickets@"
   homepage "https://github.com/rsvihladremio/ssdownloader"
   url "https://github.com/rsvihladremio/ssdownloader/archive/v0.4.6.tar.gz"
-  sha256 "729bdcaa5f4ef00cbe538097ab4579dec17807c960355f098eba717c06c723b5"
+  sha256 "0c22508a619eea1d8a4d73112dab539841116c0d2f88d14995f5ce01d9639bbc"
   license "Apache-2.0"
   depends_on "go@1.21"
 
