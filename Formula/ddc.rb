@@ -1,19 +1,19 @@
 class Ddc < Formula
     desc "collect logs of Dremio for analysis"
     homepage "https://github.com/dremio/dremio-diagnostic-collector"
-    version "0.8.3"
+    version "2.4.2"
 
     on_macos do
 
       if Hardware::CPU.intel?
         # Define the download URLs and corresponding SHA256 checksums for the binary releases
         url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-mac-intel.zip"
-        sha256 "b5544b5f7e93435a2116861c9f585674c8ce2659467640fc2f92bc3b0b358354"
+        sha256 "e3f52ae39ecc32f5d5cde4e28c0f24d9f4b369b4da4550f43b5bb2d1e8b63a88"
       end
 
       if Hardware::CPU.arm?
           url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-mac-m-series.zip"
-          sha256 "6501f918f03baa3441fef92bb5ba7d5f5d54d120e95352b88ce3a459f2b244df"
+          sha256 "852c180e414c98abbea0ff8d86f47f9899161a0d8a49ad99da1af3b7e0cca09e"
       end
     end
 
@@ -22,12 +22,12 @@ class Ddc < Formula
       if Hardware::CPU.intel?
         # Define the download URLs and corresponding SHA256 checksums for the binary releases
         url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-linux-amd64.zip"
-        sha256 "a42cf1b4a53e3d57e21dc16eb8e8ae113eae5803b1490d8d5d4173076eaae9b8"
+        sha256 "a21f238fa1b47820775929640e5450033752482bde5b93dde790235f4606445c"
       end
 
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
           url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-linux-arm64.zip"
-          sha256 "28e13ca44480c84996147d588bdecde30cb23f18dc8c83459012605db635b03a"
+          sha256 "f1d983013a47dbb395bd9e1bf84d718f3bcd959e882e68b5d273cb0a48a084bf"
       end
 
 
