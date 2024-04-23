@@ -1,5 +1,5 @@
 class Ddc < Formula
-  desc "collect logs of Dremio for analysis"
+  desc "Collect logs of Dremio for analysis"
   homepage "https://github.com/dremio/dremio-diagnostic-collector"
   version "2.4.2"
 
@@ -11,8 +11,8 @@ class Ddc < Formula
     end
 
     if Hardware::CPU.arm?
-        url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-mac-m-series.zip"
-        sha256 "852c180e414c98abbea0ff8d86f47f9899161a0d8a49ad99da1af3b7e0cca09e"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-mac-m-series.zip"
+      sha256 "852c180e414c98abbea0ff8d86f47f9899161a0d8a49ad99da1af3b7e0cca09e"
     end
   end
 
@@ -24,14 +24,15 @@ class Ddc < Formula
     end
 
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-        url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-linux-arm64.zip"
-        sha256 "f1d983013a47dbb395bd9e1bf84d718f3bcd959e882e68b5d273cb0a48a084bf"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-linux-arm64.zip"
+      sha256 "f1d983013a47dbb395bd9e1bf84d718f3bcd959e882e68b5d273cb0a48a084bf"
     end
-
   end
 
   def install
-    bin.install "ddc" => "ddc"
+    libexec.install "bin/ddc" => "ddc"
+    libexec.install "bin/ddc.yaml" => "ddc.yaml"
+    bin.write_exec_script libexec/"ddc"
   end
 
   test do
