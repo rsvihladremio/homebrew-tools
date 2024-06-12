@@ -25,7 +25,7 @@ class Brewgen < Formula
   end
 
   def install
-    libexec.install "brewgen" => "brewgen"
+    libexec.install "target/aarch64-apple-darwin/release/brewgen" => "brewgen"
     bin.write_exec_script libexec/"brewgen"
   end
 
