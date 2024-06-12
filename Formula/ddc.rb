@@ -1,31 +1,31 @@
 class Ddc < Formula
   desc "Collect logs of Dremio for analysis"
   homepage "https://github.com/dremio/dremio-diagnostic-collector"
-  version "3.0.0"
+  version "3.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
       # Define the download URLs and corresponding SHA256 checksums for the binary releases
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-mac-intel.zip"
-      sha256 "7cd3dd4644fbb6b572c5f9f799a03a2918f0d9661bb2ce4811804b9a68b2fbe9"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.1.1/ddc-mac-intel.zip"
+      sha256 "7bcb09edf241ffa44e2374746f3df893b52c3ec09aa0c8533b686ebb2a504af3"
     end
 
     if Hardware::CPU.arm?
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-mac-m-series.zip"
-      sha256 "ff2b6777a5906252ec5a44206da9803acaa53714c31d515ccbadabdae8f6c561"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.1.1/ddc-mac-m-series.zip"
+      sha256 "2b4c3be267990bac8f3af5b5fc066a8138defc5f264af942e45f490d4cfa9fe5"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       # Define the download URLs and corresponding SHA256 checksums for the binary releases
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-linux-amd64.zip"
-      sha256 "80f8546179d3bf95b97f364cf44e4d70babef7de5fd0311fa6b5c576d14ec5ec"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.1.1/ddc-linux-amd64.zip"
+      sha256 "3ee9e12794c9ae402e493a4411f4e35e4230c3512800c23b541526f9dcdf3bfc"
     end
 
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v#{version}/ddc-linux-arm64.zip"
-      sha256 "b035c9b222aa059f6a09d5d55e334000987288e4e9c3d7d22d6fc123059dfa91"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.1.1/ddc-linux-arm64.zip"
+      sha256 "40f0b8a65886a4dbe605804cf4827f1c218ba076504a87f61c8dd5c25c86e1c6"
     end
   end
 
