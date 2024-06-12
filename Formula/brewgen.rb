@@ -25,7 +25,7 @@ class Brewgen < Formula
   end
 
   def install
-    libexec.install "bin/brewgen" => "brewgen"
+    libexec.install "brewgen" => "brewgen"
     bin.write_exec_script libexec/"brewgen"
   end
 
