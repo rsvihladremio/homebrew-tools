@@ -30,7 +30,7 @@ class Dqd < Formula
   end
 
   def install
-    libexec.install "bin/dqd" => "dqd"
+    libexec.install "dqd" => "dqd"
     bin.write_exec_script libexec/"dqd"
   end
 
