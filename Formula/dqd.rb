@@ -1,26 +1,26 @@
 class Dqd < Formula
   desc "identifies problems in dremio"
   homepage "https://github.com/rsvihladremio/dqd"
-  version "0.12.0"
+  version "0.12.1"
 
   on_macos do
     if Hardware::CPU.intel?
       # Define the download URLs and corresponding SHA256 checksums for the binary releases
-      url "https://github.com/rsvihladremio/dqd/releases/download/v0.12.0/dqd-0.12.0-mac-intel.zip"
-      sha256 "39a3cd1fcd272a3d8ace24d8ca0776e59ef561447b45434a228eea37872ed526"
+      url "https://github.com/rsvihladremio/dqd/releases/download/v0.12.1/dqd-0.12.1-mac-intel.zip"
+      sha256 "44963a3ba7ac405b6016bebacb995c0404c08255e5c3a40afd7484b565d50533"
     end
 
     if Hardware::CPU.arm?
-      url "https://github.com/rsvihladremio/dqd/releases/download/v0.12.0/dqd-0.12.0-mac-apple-silicon.zip"
-      sha256 "3f7276cc5589e2b6a5d7cbb81dd65aab4622ff9770d6378c8b1aae392b71fbe4"
+      url "https://github.com/rsvihladremio/dqd/releases/download/v0.12.1/dqd-0.12.1-mac-apple-silicon.zip"
+      sha256 "ca92ab9090f93f3257b15af99a9c765a36139fc6d3b79fe00506e92d87ba66ce"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       # Define the download URLs and corresponding SHA256 checksums for the binary releases
-      url "https://github.com/rsvihladremio/dqd/releases/download/v0.12.0/dqd-0.12.0-linux-amd64.zip"
-      sha256 "b932745e9803f506818c80de11c39ff65f49c0b3b263967ba277e8e5e91d81d5"
+      url "https://github.com/rsvihladremio/dqd/releases/download/v0.12.1/dqd-0.12.1-linux-amd64.zip"
+      sha256 "ce23a601d7c7a7eb4b38eab1a2ac40159b74bf62f3b9518fe7c694bbd4282420"
     end
 
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
@@ -36,6 +36,6 @@ class Dqd < Formula
 
   test do
     # Add test logic here if applicable
-    system "#{bin}/dqd", "version"
+    system "#{bin}/dqd", "help"
   end
 end
