@@ -1,31 +1,31 @@
 class Ddc < Formula
   desc "Collect logs of Dremio for analysis"
   homepage "https://github.com/dremio/dremio-diagnostic-collector"
-  version "3.2.1"
+  version "3.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
       # Define the download URLs and corresponding SHA256 checksums for the binary releases
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.1/ddc-mac-intel.zip"
-      sha256 "35d1e81343263fe5b2db6d2d8b1543c6d00f91b64fa86f486dae98a29aec7fdf"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.3/ddc-mac-intel.zip"
+      sha256 "0c6ac2181f4822091f38548f277ed7a1d4e20c6c3929d5bd3e517f43ddf79b67"
     end
 
     if Hardware::CPU.arm?
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.1/ddc-mac-m-series.zip"
-      sha256 "a1413cd46141e6cd06214b52a00d8ab3091e235b31780c7528f5e860ea957370"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.3/ddc-mac-m-series.zip"
+      sha256 "77cc631970091add5fc6b808bd762762a9954a8260919dfb7e044cd30846ac19"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       # Define the download URLs and corresponding SHA256 checksums for the binary releases
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.1/ddc-linux-amd64.zip"
-      sha256 "29eb2fe863aee950c42d2fe9a60caac1f6d0cc8bef1b4f08cb24aa3c46db521e"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.3/ddc-linux-amd64.zip"
+      sha256 "0df5366fec7e42431fd1a80f3957aba52a6089fcb289706c639f66d89e369a61"
     end
 
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.1/ddc-linux-arm64.zip"
-      sha256 "86ea7721b588169af6191c09fe834d9d0ad902cc8de33f03ec30a2e6ee58a05a"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.3/ddc-linux-arm64.zip"
+      sha256 "d2f016fa770562092a86a9a60a53fb041ce888ce2805c0068ee56697198824f2"
     end
   end
 
