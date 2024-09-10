@@ -1,31 +1,31 @@
 class Ddc < Formula
-  desc "Collect logs of Dremio for analysis"
+  desc "captures diagnostics from Dremio"
   homepage "https://github.com/dremio/dremio-diagnostic-collector"
-  version "3.2.3"
+  version "3.2.4"
 
   on_macos do
     if Hardware::CPU.intel?
       # Define the download URLs and corresponding SHA256 checksums for the binary releases
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.3/ddc-mac-intel.zip"
-      sha256 "0c6ac2181f4822091f38548f277ed7a1d4e20c6c3929d5bd3e517f43ddf79b67"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.4/ddc-mac-intel.zip"
+      sha256 "b9ae1e9b0f380377cde2efffda3c8debd004dd925e1cae9be6c274151ce53e30"
     end
 
     if Hardware::CPU.arm?
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.3/ddc-mac-m-series.zip"
-      sha256 "77cc631970091add5fc6b808bd762762a9954a8260919dfb7e044cd30846ac19"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.4/ddc-mac-m-series.zip"
+      sha256 "ff9fdc4b5c9a868f7f3fcc377e2543546e996d09de2d1f9eb0a4a401cf42ac6e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       # Define the download URLs and corresponding SHA256 checksums for the binary releases
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.3/ddc-linux-amd64.zip"
-      sha256 "0df5366fec7e42431fd1a80f3957aba52a6089fcb289706c639f66d89e369a61"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.4/ddc-linux-amd64.zip"
+      sha256 "abc1f1ca633eefe7f2019664abfcccf4556df87f81feb994c0948136024d7ebd"
     end
 
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.3/ddc-linux-arm64.zip"
-      sha256 "d2f016fa770562092a86a9a60a53fb041ce888ce2805c0068ee56697198824f2"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.2.4/ddc-linux-arm64.zip"
+      sha256 "65d03a9b16139bd4f8b80b48fa825eb52ff4aad4e35b4fea19bc9f4c73040485"
     end
   end
 
