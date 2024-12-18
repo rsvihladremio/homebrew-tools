@@ -30,7 +30,7 @@ class Ssdownloader < Formula
   end
 
   def install
-    libexec.install "bin/ssdownloader" => "ssdownloader"
+    libexec.install "ssdownloader" => "ssdownloader"
     bin.write_exec_script libexec/"ssdownloader"
   end
 
