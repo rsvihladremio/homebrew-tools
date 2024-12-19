@@ -31,6 +31,7 @@ class Ddc < Formula
 
   def install
     libexec.install "bin/ddc" => "ddc"
+    libexec.install "bin/ddc.yaml" => "ddc.yaml"
     bin.write_exec_script libexec/"ddc"
   end
 
