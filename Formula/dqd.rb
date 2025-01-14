@@ -1,4 +1,4 @@
-class Ddc < Formula
+class Dqd < Formula
   desc "finds problems in Dremio"
   homepage "https://github.com/rsvihladremio/dqd"
   version "0.12.3"
