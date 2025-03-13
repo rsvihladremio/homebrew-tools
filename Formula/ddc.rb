@@ -1,31 +1,31 @@
 class Ddc < Formula
   desc "collect logs and metrics from dremio"
   homepage "https://github.com/dremio/dremio-diagnostic-collector"
-  version "3.3.1"
+  version "3.3.3"
 
   on_macos do
     if Hardware::CPU.intel?
       # Define the download URLs and corresponding SHA256 checksums for the binary releases
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.1/ddc-mac-intel.zip"
-      sha256 "a2e3ad64215402455c4c580b58fc0bac23b6adf6d3723fbc1281c607d1125f33"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.3/ddc-mac-intel.zip"
+      sha256 "aea0604a83ccf81ec39f9d86437dc5b3770a5ad3a5a2e900cf05fcff688cfd4f"
     end
 
     if Hardware::CPU.arm?
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.1/ddc-mac-m-series.zip"
-      sha256 "8c9e8cf412eeb776dd9f6b48ad74dbf04b739e90d155c930332bc3fab67670c7"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.3/ddc-mac-m-series.zip"
+      sha256 "928c8a3a68bfe523384c6ccf9119418bf20aaf0e4d91812cebe611fecb9ee467"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       # Define the download URLs and corresponding SHA256 checksums for the binary releases
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.1/ddc-linux-amd64.zip"
-      sha256 "bfcaebf71f91645939fd45f4e6c08f3262b32b9b28ec05fda0fd57cbca94987e"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.3/ddc-linux-amd64.zip"
+      sha256 "d68e946a02b83eb95b4aa48e0de6abf9b9d6be999058161cf9303ad0010c9895"
     end
 
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.1/ddc-linux-arm64.zip"
-      sha256 "b4f985ca403c58cd83375268149cc4322959750dae6cad278577bbb3c8d69616"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.3/ddc-linux-arm64.zip"
+      sha256 "2192b4e15467a08eeabf98eccaaec5d09a594e56c8d731d58f56fa0fa69af4ad"
     end
   end
 
@@ -37,6 +37,6 @@ class Ddc < Formula
 
   test do
     # Add test logic here if applicable
-    system "#{bin}/ddc", "version"
+    system "#{bin}/ddc", "help"
   end
 end
