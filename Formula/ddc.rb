@@ -28,7 +28,6 @@ class Ddc < Formula
       sha256 "f17b0c9835ad07a6a243ff2c95f0de2c5f395b23f0c2e4ec371eea03b479f820"
     end
   end
-  version "3.3.3"
 
   def install
     libexec.install "bin/ddc" => "ddc"
