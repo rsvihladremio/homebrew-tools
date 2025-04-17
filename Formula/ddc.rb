@@ -1,33 +1,34 @@
 class Ddc < Formula
   desc "collect logs and metrics from dremio"
   homepage "https://github.com/dremio/dremio-diagnostic-collector"
-  version "3.3.3"
+  version "3.3.4"
 
   on_macos do
     if Hardware::CPU.intel?
       # Define the download URLs and corresponding SHA256 checksums for the binary releases
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.3/ddc-mac-intel.zip"
-      sha256 "aea0604a83ccf81ec39f9d86437dc5b3770a5ad3a5a2e900cf05fcff688cfd4f"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.4/ddc-mac-intel.zip"
+      sha256 "ac665d2b82302149943eec48b6b484492fe96f41ed66cda53aa5cd46f199e2f0"
     end
 
     if Hardware::CPU.arm?
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.3/ddc-mac-m-series.zip"
-      sha256 "928c8a3a68bfe523384c6ccf9119418bf20aaf0e4d91812cebe611fecb9ee467"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.4/ddc-mac-m-series.zip"
+      sha256 "d1920f329696041e51908da9ba3cade497f0980b14fddc69b3ccdcaa19bc4fff"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       # Define the download URLs and corresponding SHA256 checksums for the binary releases
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.3/ddc-linux-amd64.zip"
-      sha256 "d68e946a02b83eb95b4aa48e0de6abf9b9d6be999058161cf9303ad0010c9895"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.4/ddc-linux-amd64.zip"
+      sha256 "de48ac15ad0cd52864fc16a0cbb2ffc49adac357d141b480a41972879d257f95"
     end
 
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.3/ddc-linux-arm64.zip"
-      sha256 "2192b4e15467a08eeabf98eccaaec5d09a594e56c8d731d58f56fa0fa69af4ad"
+      url "https://github.com/dremio/dremio-diagnostic-collector/releases/download/v3.3.4/ddc-linux-arm64.zip"
+      sha256 "f17b0c9835ad07a6a243ff2c95f0de2c5f395b23f0c2e4ec371eea03b479f820"
     end
   end
+  version "3.3.3"
 
   def install
     libexec.install "bin/ddc" => "ddc"
